@@ -71,7 +71,7 @@ python tools/data_augmentation.py \
 ```bash
 python train.py
 ```
-&emsp;&emsp;训练参数由参数配置文件sgcn_3_layer.py配置，当需要修改训练参数时，直接修改sgcn_3_layer.py即可，然后直接在终端运行python train.py。
+&emsp;&emsp;训练参数由参数配置文件sgcn_4_layer.py配置，当需要修改训练参数时，直接修改sgcn_4_layer.py即可，然后直接在终端运行python train.py。
 参数说明：
 ```python
 train_args = dict(
@@ -98,11 +98,11 @@ train_args = dict(
 &emsp;&emsp;使用Tensorboard可查看训练精度与损失曲线。
 
 ### 1.4 模型测试
-&emsp;&emsp;在终端运行eval.py，命令行如下所示：
+&emsp;&emsp;在终端运行action_test.py，命令行如下所示：
 ```bash
-python eval.py
+python action_test.py
 ```
-&emsp;&emsp;测试参数由参数配置文件sgcn_3_layer.py配置，当需要修改测试参数时，直接修改sgcn_3_layer.py即可，然后直接在终端运行python eval.py。
+&emsp;&emsp;测试参数由参数配置文件sgcn_4_layer.py配置，当需要修改测试参数时，直接修改sgcn_4_layer.py即可，然后直接在终端运行python eval.py。
 参数说明：
 ```python
 test_args = dict(
