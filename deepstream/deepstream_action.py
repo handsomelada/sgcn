@@ -299,7 +299,7 @@ def main(args):
     class_path  = F'{ROOT}/label_map.txt'       # 动作类别名称文件路径
     class_thres = 0.5                           # 分类阈值, 人的置信度大于该值才进行动作分类分类, 仅在图片推理(inference_single_frame)中起作用
     img_size    = INFER_SHAPE[2:]               # 推理的关键点坐标所在的图片的尺寸, (h,w)
-    shape       = [1,14,3]                      # 动作识别的关键点尺寸，12个关键点的x,y坐标以及置信度构成
+    shape       = [1,14,3]                      # 动作识别的关键点尺寸，14个关键点的x,y坐标以及置信度构成
     num_classes = 4                             # 动作识别的类别数量
     keypoints_thr = 0.6                      # 关键点置信度，小于此值将被置为无效关键点
     num_invalid = 4                             # 无效关键点个数

@@ -166,7 +166,7 @@ class Action_TRT():
     def inference_single_object(self, keypoint):
         '''推理单个对象的姿态关键点
             Arguments:
-                keypoint: numpy.ndarray, 单个人的姿态估计识别结果, 尺寸: [36,], 12个关键点 x 3
+                keypoint: numpy.ndarray, 单个人的姿态估计识别结果, 尺寸: [42,], 14个关键点 x 3
             Return:
                 action_label: str, 动作类别
                 confidence: float, 动作置信度(概率)
@@ -196,7 +196,7 @@ class Action_TRT():
     def inference_multi_object(self, keypoints):
         '''推理多个对象的姿态关键点\n
             Arguments:
-                keypoints: numpy.ndarray, 多个人的姿态估计识别结果, 尺寸: [N,36], 12个关键点 x 3
+                keypoints: numpy.ndarray, 多个人的姿态估计识别结果, 尺寸: [N,42], 14个关键点 x 3
             Return:
                 action_labels: list, 动作类别
                 confidences: list, 动作置信度(概率)
@@ -255,7 +255,7 @@ def sample1():
     classmap_path = '../../label_map.txt'  # 动作识别类别文件路径
     class_thres = 0.5  # 动作识别阈值, 低于该值不进行动作识别, 仅在frame推理模式(inference_single_frame)下有效
     img_size = [720, 1280]  # 待识别对象所在图片的尺寸  [height,weight]
-    shape = [1, 12, 3]  # 动作识别模型的输入尺寸    [batch_size,length,channel]
+    shape = [1, 14, 3]  # 动作识别模型的输入尺寸    [batch_size,length,channel]
     num_classes = 4  # 动作识别类别数量
     keypoints_thr = 0.45
     num_invalid = 4
@@ -305,7 +305,7 @@ def sample2():
     classmap_path = '/root/autodl-tmp/wmh/yolopose/label_map.txt'
     class_thres = 0.5
     img_size = [720, 1280]
-    shape = [1, 12, 3]
+    shape = [1, 14, 3]
     num_classes = 4
     keypoints_thr = 0.45
     num_invalid = 4
@@ -347,7 +347,7 @@ def video_sample():
     classmap_path = '/root/autodl-tmp/wmh/yolopose/label_map.txt'
     class_thres = 0.5
     img_size = [720, 1280]
-    shape = [1, 12, 3]
+    shape = [1, 14, 3]
     num_classes = 4
     keypoints_thr = 0.6
     num_invalid = 4
