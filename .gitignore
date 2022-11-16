@@ -2,4 +2,3 @@ __pycache__
 training curves
 *.log
 *.json
-labels/
