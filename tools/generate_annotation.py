@@ -97,7 +97,7 @@ if __name__ == '__main__':
 	# dataset args
 	parser.add_argument('--json_dir', default='/root/autodl-tmp/wmh/dataset/escalator/action_label/1', type=str)
 	parser.add_argument('--out_dir', default='/root/autodl-tmp/wmh/sgcn/data/escalator_dataset/', type=str)
-	parser.add_argument('--ratio', default=[0.8, 0.1, 0.1], type=list)
+	parser.add_argument('--ratio', nargs='*', default=[0.8, 0.2], type=float)
 	parser.add_argument('--num_keyponits', default=14, type=int)
 
 	opt = parser.parse_args()

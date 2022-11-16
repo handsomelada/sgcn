@@ -45,6 +45,7 @@ python tools/generate_annotation.py \
 ##                      1.若数据集太小，只需要训练集，设置[1]
 ##                      2.若划分为训练集与测试集，设置[0.8, 0.2]
 ##                      3.若划分为训练集、验证集与测试集，设置[0.8, 0.1，0.1]
+##                      4.命令行设置时为 --ratio 0.8 0.1 0.1 或 --ratio 0.8 0.2 或 --ratio 1
 ## --num_keyponits  输入网络的COCO关键点个数，目前设置为12、14、17：
 ##                      1. 12对应除去头部五个点后剩余的关键点
 ##                      2. 14对应除去双眼和鼻子三个点后剩余的关键点
@@ -102,7 +103,7 @@ train_args = dict(
 ```bash
 python action_test.py
 ```
-&emsp;&emsp;测试参数由参数配置文件sgcn_4_layer.py配置，当需要修改测试参数时，直接修改sgcn_4_layer.py即可，然后直接在终端运行python eval.py。
+&emsp;&emsp;测试参数由参数配置文件sgcn_4_layer.py配置，当需要修改测试参数时，直接修改sgcn_4_layer.py即可，然后直接在终端运行python action_test.py。
 参数说明：
 ```python
 test_args = dict(
